@@ -8,17 +8,17 @@ The Bipolar Transistor (BJT) is made of three doped silicon regions. The outer t
 
 ## Summary
 
-We want the transistor to be in **Forward-Active Region**, which means:
+### NPN Bipolar Transistor
+
+**Forward-Active Region**:
 
 $$V_{BE} > 0$$
 
 $$V_{CE} > V_{BE}$$
 
-Only in the forward-active region, we can break the transistor into large and small signal models through superposition:
-
 **Large Signal Models**
 
-$$I_C = \beta I_B$$
+$$I_B = \frac{1}{\beta} I_C$$
 
 $$I_C = I_s e^{\frac{V_{BE}}{V_T}}$$
 
@@ -28,7 +28,25 @@ $$\beta \in [50, 200]$$
 
 $$V_T = 26 \space mV$$
 
-**Small Signal Model**
+### PNP Bipolar Transistor
+
+**Forward-Active Region**:
+
+$$V_{EB} > 0$$
+
+$$V_{EC} > V_{EB}$$
+
+**Large Signal Model**
+
+$$I_B = \frac{1}{\beta} I_C$$
+
+$$I_C = I_s e^{\frac{V_{EB}}{V_T}}$$
+
+$$I_E = \frac{\beta + 1}{\beta} I_C$$
+
+$$\beta \in [50, 200]$$
+
+**Small Signal Model**: Same for NPN and PNP
 
 $$g_m = \frac{I_C}{V_T}$$
 
@@ -37,7 +55,7 @@ $$r_{\pi} = \frac{\beta}{g_m}$$
 $$r_o = \frac{V_A}{I_C}$$
 
 
-## Regions of Operation - Forward Active Region
+## NPN Regions of Operation - Forward Active Region
 
 **NPN BJT Requirement**
 * Base-emitter junction is forward-biased ($V_{BE} > 0$)
@@ -114,13 +132,13 @@ $$I_C = \Big(I_s e^{\frac{V_{BE}}{V_T}}\Big)\Big( 1 + \frac{V_{CE}}{V_A}\Big)$$
 
 As $V_A \longrightarrow \infty$, there's no early effect.
 
-## Regions of Operation - Soft Saturation
+## NPN Regions of Operation - Soft Saturation
 * Base-emitter junction is forward biased ($V_{BE} > 0$)
-* Base-collector junction is weakly forward-biased.
+* Base-collector junction is weakly forward-biased ($-200\space mV \leq V_C - V_B \leq 0$)
 
-## Regions of Operation - Deep Saturation
+## NPN Regions of Operation - Deep Saturation
 * Base-emitter junction is forward biased ($V_{BE} > 0$).
-* Base-collector junciton is heavily forward-biased.
+* Base-collector junciton is heavily forward-biased ($V_C - V_B \leq -200 \space mV $).
 
 The transistor loses its voltage-controlled current capability and $V_{CE}$ becomes constant.
 
@@ -133,6 +151,8 @@ Why Small Signal
 Good to have a high input impedance because it will minimally change the gain of the preceding stage
 
 Why do input and output impedances matter for current and voltage source amplifiers?
+
+
 
 ## Common-Emitter Amplifier with Degeneration
 
