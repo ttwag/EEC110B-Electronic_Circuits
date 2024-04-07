@@ -6,6 +6,37 @@
 
 The Bipolar Transistor (BJT) is made of three doped silicon regions. The outer two regions are doped with the same polarity while the middle region is doped with opposite polarity. Therefore, there is a PNP and NPN bipolar transistor. In this document, we will abstract away the physical behaviors of the BJT and model it with a small and large signal model when it's in the region of operation.
 
+## Summary
+
+We want the transistor to be in **Forward-Active Region**, which means:
+
+$$V_{BE} > 0$$
+
+$$V_{CE} > V_{BE}$$
+
+Only in the forward-active region, we can break the transistor into large and small signal models through superposition:
+
+**Large Signal Models**
+
+$$I_C = \beta I_B$$
+
+$$I_C = I_s e^{\frac{V_{BE}}{V_T}}$$
+
+$$I_E = \frac{\beta + 1}{\beta} I_C$$
+
+$$\beta \in [50, 200]$$
+
+$$V_T = 26 \space mV$$
+
+**Small Signal Model**
+
+$$g_m = \frac{I_C}{V_T}$$
+
+$$r_{\pi} = \frac{\beta}{g_m}$$
+
+$$r_o = \frac{V_A}{I_C}$$
+
+
 ## Regions of Operation - Forward Active Region
 
 **NPN BJT Requirement**
@@ -29,7 +60,7 @@ $$V_{BE} > 0$$
 
 $$I_C \approx I_s e^{\frac{V_{BE}}{V_T}}$$
 
-where $V_T = \frac{kT}{q} \approx 26 \space mJ$ at 300 K
+where $V_T = \frac{kT}{q} \approx 26 \space mV$ at 300 K
 
 which means, 
 
@@ -45,9 +76,11 @@ A diode is placed between the base and emitter and a voltage-controlled current 
 
 ![Figure3](./image/Figure3.png)
 
-$$I_B = \frac{I_C}{\beta}$$
+$$I_C = \beta I_B$$
 
 $$I_E = \frac{\beta + 1}{\beta} I_C$$
+
+$\beta$ is the current gain of the transistor because it shows how much the current gain is amplified. The $\beta$ of npn transistor typically ranges from 50 to 200.
 
 **Small-Signal Model**
 
