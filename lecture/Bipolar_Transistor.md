@@ -90,7 +90,13 @@ Ideally, the collector current is **not** a function of $V_{CE}$. We want it to 
 
 **Large Signal Model**
 
-A diode is placed between the base and emitter and a voltage-controlled current source is placed between the collector and emitter.
+Since $V_{BE} > 0$, the base-emitter junction is forward-biased and resembles a diode. Also, the collector current is modeled by the $I_C$ equation, which depends on $V_{BE}$.
+
+Therefore, a diode is placed between the base and emitter and a voltage-controlled current source is placed between the collector and emitter.
+
+**The cause and effect relationship:** $$V_{BE} \to I_C \to I_B \to I_E$$
+
+The base-emitter voltage generates a collector current, which requires a proportional base current, and they combines to the emitter current.
 
 ![Figure3](./image/Figure3.png)
 
@@ -102,15 +108,33 @@ $\beta$ is the current gain of the transistor because it shows how much the curr
 
 **Small-Signal Model**
 
+We want to work with the BJT without working with the $I_C = I_se^{\frac{V_{BE}}{V_T}}$ nonlinear equation.
+
+Therefore, we will linearize the BJT with the derivative, $g_m$.
+
+$$g_m = \frac{d I_C}{d V_{BE}} = \frac{d}{d V_{BE}} \Big(I_s e^{\frac{V_{BE}}{V_T}} \Big) = \frac{I_C}{V_T}$$
+
+Now if $V_{BE}$ has a small change, $\Delta V_{BE}$, 
+
+$$\Delta I_C = g_m \Delta V_{BE}$$
+
+Therefore, we can analyze the BJT by separating the $V_{BE}$ into DC (b) and small perturbation (a) components, then add the results.
+
+
+
 The small signal model describes the behavior of the transistor when a small perturbation of voltages (EX: Sinusoidal perturbation) is applied to the transistor nodes.
+
 
 ![Figure5](./image/Figure5.png)
 
 $g_m$ is the **Transconductance**, as it measures how well the transistor converts voltage to current. Therefore, it's the slope in the $I_C$ vs $V_{BE}$ graph.
 
-$$g_m = \frac{d I_C}{d V_{BE}} = \frac{d}{d V_{BE}} \Big(I_s e^{\frac{V_{BE}}{V_T}} \Big) = \frac{I_C}{V_T}$$
+
+We say the transistor is **biased** at a collector current $I_C$, meaning that the device carries a bias current of $I_C$ in the absence of signals.
 
 $r_{\pi}$ is the resistance between the base and emitter.
+
+Since $\Delta I_B = \frac{\Delta I_C}{\beta}$, $\Delta I_B = \frac{g_m}{\beta} \Delta V_{BE}$,
 
 $$r_{\pi} = \frac{d V_{BE}}{d I_B} = \frac{\beta}{g_m}$$
 
@@ -132,6 +156,8 @@ $$I_C = \Big(I_s e^{\frac{V_{BE}}{V_T}}\Big)\Big( 1 + \frac{V_{CE}}{V_A}\Big)$$
 
 As $V_A \longrightarrow \infty$, there's no early effect.
 
+**Input/Output Impedance**
+
 ## NPN Regions of Operation - Soft Saturation
 * Base-emitter junction is forward biased ($V_{BE} > 0$)
 * Base-collector junction is weakly forward-biased ($-200\space mV \leq V_C - V_B \leq 0$)
@@ -142,41 +168,5 @@ As $V_A \longrightarrow \infty$, there's no early effect.
 
 The transistor loses its voltage-controlled current capability and $V_{CE}$ becomes constant.
 
-Superposition
-
-Why Large Signal
-
-Why Small Signal
-
-Good to have a high input impedance because it will minimally change the gain of the preceding stage
-
-Why do input and output impedances matter for current and voltage source amplifiers?
-
-
-
-## Common-Emitter Amplifier with Degeneration
-
-* Pro: More stable DC 
-* Con: low gain
-
-$$A_v = -\frac{g_m R_c}{1 + R_E(\frac{1}{r_{\pi}} + g_m)}$$
-
-Since $g_m >> \frac{1}{r_{\pi}}$
-
-we have
-
-$$A_v = -\frac{R_c}{\frac{1}{g_m} + R_E}$$
-
-$$R_{in} = r_{\pi} + (\beta + 1) R_E$$
-
-$R_{out} = R_c$, $V_A -> \infty$
-
-$V_A \neq \infty$
-
-$$R_{out} = [1 + g_m (R_E || r_{\pi})]r_o + R_E || r_{\pi}$$
-
-when $g_m r_o >> 1$
-
-$$R_{out} = [1 + g_m (R_E || r_{\pi})]r_o$$ 
 
 
