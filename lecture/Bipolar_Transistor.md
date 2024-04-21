@@ -106,19 +106,43 @@ $$I_E = \frac{\beta + 1}{\beta} I_C$$
 
 $\beta$ is the current gain of the transistor because it shows how much the current gain is amplified. The $\beta$ of npn transistor typically ranges from 50 to 200.
 
+The base-emitter junction is modelled as a diode because the collector current equation is approximately the same as the diode equation.
+
+$$I_B = \frac{I_C}{\beta} = \frac{I_S}{\beta}e^{\frac{V_{BE}}{V_T}}$$
+
 **Small-Signal Model**
 
 We want to work with the BJT without working with the $I_C = I_se^{\frac{V_{BE}}{V_T}}$ nonlinear equation.
 
-Therefore, we will linearize the BJT with the derivative, $g_m$.
+Assume that we have a DC voltage with some ripple: $V_{BE} + \Delta V_{BE}$ going into the BJT's base. The collector current $I_C$, will be:
 
-$$g_m = \frac{d I_C}{d V_{BE}} = \frac{d}{d V_{BE}} \Big(I_s e^{\frac{V_{BE}}{V_T}} \Big) = \frac{I_C}{V_T}$$
+$$I_C = I_Se^{\frac{V_{BE} + \Delta V_{BE}}{V_T}}$$
 
-Now if $V_{BE}$ has a small change, $\Delta V_{BE}$, 
+$$= I_S e^{\frac{V_{BE}}{V_T}} e^{\frac{\Delta V_{BE}}{V_T}}$$
 
-$$\Delta I_C = g_m \Delta V_{BE}$$
+If $\frac{\Delta V_{BE}}{V_T}$ is small, we could approximate $e^x$ as $1 + x$ via the Taylor's expansion of e.
+
+$$I_C = I_Se^{\frac{V_{BE}}{V_T}} (1 + \frac{\Delta V_{BE}}{V_T})$$
+
+$$= I_{C, DC} + I_{C, DC} \frac{\Delta V_{BE}}{V_T}$$
+
+$$= I_{C, DC} + g_m \Delta V_{BE}$$
+
+$$= I_{C, DC} + I_{C, AC}$$
+
+where $I_{C, DC}$ and $I_{C, AC}$ is the current caused by the DC and AC voltage, and $g_m$ is the small signal transconductance.
 
 Therefore, we can analyze the BJT by separating the $V_{BE}$ into DC (b) and small perturbation (a) components, then add the results.
+
+Now,
+
+$$I_B = \frac{I_C}{\beta} = \frac{I_{C, DC}}{\beta} + \frac{g_m \Delta V_{BE}}{\beta} = I_{B, DC} + I_{B, AC}$$
+
+The resistance between the base and emitter in the small signal analysis is
+
+$$r_{\pi} = \frac{\Delta V_{BE}}{I_{B, AC}} = \frac{\beta}{g_m}$$
+
+
 
 
 
@@ -133,10 +157,6 @@ $g_m$ is the **Transconductance**, as it measures how well the transistor conver
 We say the transistor is **biased** at a collector current $I_C$, meaning that the device carries a bias current of $I_C$ in the absence of signals.
 
 $r_{\pi}$ is the resistance between the base and emitter.
-
-Since $\Delta I_B = \frac{\Delta I_C}{\beta}$, $\Delta I_B = \frac{g_m}{\beta} \Delta V_{BE}$,
-
-$$r_{\pi} = \frac{d V_{BE}}{d I_B} = \frac{\beta}{g_m}$$
 
 $r_o$ is the early effect resistance between the collector and emitter.
 
