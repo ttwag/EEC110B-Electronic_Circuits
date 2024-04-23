@@ -36,9 +36,9 @@ $$= \frac{2 I_D}{V_{GS} - V_{TH}}$$
 
 **Large Signal Model**
 
-$$I_{D, Sat} = \frac{1}{2}\mu_p C_{ox} \frac{W}{L}(V_{GS} - V_{THP})^2 (1-\lambda V_{DS})$$
+$$I_{D, Sat} = -\frac{1}{2}\mu_p C_{ox} \frac{W}{L}(V_{GS} - V_{THP})^2 (1-\lambda V_{DS})$$
 
-$$I_{D, Triode} = \frac{1}{2}\mu_p C_{ox} \frac{W}{L} [2(V_{GS} - V_{THP})V_{DS} - V_{DS}^2]$$
+$$I_{D, Triode} = -\frac{1}{2}\mu_p C_{ox} \frac{W}{L} [2(V_{GS} - V_{THP})V_{DS} - V_{DS}^2]$$
 
 Small Signal Model - Same for NMOS and PMOS
 
