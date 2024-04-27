@@ -21,6 +21,9 @@ Here's an example of calculating the input impedance:
 
 ![Figure7](./image/Figure7.png)
 
+## Common-Base Amplifier
+
+## Common-Collector Amplifier
 
 ## Common-Emitter Amplifier with Degeneration
 
@@ -47,4 +50,8 @@ when $g_m r_o >> 1$
 
 $$R_{out} = [1 + g_m (R_E || r_{\pi})]r_o$$ 
 
+
+## Emitter Follower
+
+Amplifier Gain < 1
 
