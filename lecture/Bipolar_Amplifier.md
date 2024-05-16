@@ -21,37 +21,27 @@ Here's an example of calculating the input impedance:
 
 ![Figure7](./image/Figure7.png)
 
-## Common-Base Amplifier
+We should set the input source to zero because the equivalent circuit of any independent voltage source is zero.
+That's because we calculate the equivalent resistance by finding the slope R from a change in applied voltage and change in current
 
-## Common-Collector Amplifier
+$$R = \frac{V_2 - V_1}{I_2 - I_1}$$
 
-## Common-Emitter Amplifier with Degeneration
+For an ideal independent voltage source, the voltage is constant regardless of applied voltage to its node, so $V_2 - V_1 = 0$
 
-* Pro: More stable DC 
-* Con: low gain
+As a result, its equivalent resistance is zero, which is a wire.
 
-$$A_v = -\frac{g_m R_c}{1 + R_E(\frac{1}{r_{\pi}} + g_m)}$$
+## NPN BJT Small Signal Characteristics
 
-Since $g_m >> \frac{1}{r_{\pi}}$
-
-we have
-
-$$A_v = -\frac{R_c}{\frac{1}{g_m} + R_E}$$
-
-$$R_{in} = r_{\pi} + (\beta + 1) R_E$$
-
-$R_{out} = R_c$, $V_A -> \infty$
-
-$V_A \neq \infty$
-
-$$R_{out} = [1 + g_m (R_E || r_{\pi})]r_o + R_E || r_{\pi}$$
-
-when $g_m r_o >> 1$
-
-$$R_{out} = [1 + g_m (R_E || r_{\pi})]r_o$$ 
+| Topology | Schematic | Gain | Input Impedance | Output Impedance |
+|---: |---: |---: |---: |---: |
+| Common-Emitter | <img src="./image/Figure19.png" alt="drawing" width="150"/> | $\frac{-R_C}{R_E + \frac{1}{g_m}}$ | $r_{\pi} + R_E (1 + \beta)$ | $R_C$ |
+| Common-Base | <img src="./image/Figure20.png" alt="drawing" width="150"/> | $\frac{R_C}{R_E (1 + \frac{1}{\beta}) + \frac{1}{g_m}}$ | $\frac{1}{g_m + \frac{1}{r_{\pi}}} + R_E$ | $R_C$ |
+| Common-Collector | <img src="./image/Figure21.png" alt="drawing" width="150"/> | $\frac{R_E}{R_E + \frac{1}{g_m (1 + \frac{1}{\beta})}}$ | $r_{\pi} + R_E (1 + \beta)$ | $\frac{1}{g_m + \frac{1}{R_E} + \frac{1}{r_{\pi}}}$ |
+| Diode Connected - Base Collector Grounded - Look into Emitter | <img src="./image/Figure22.png" alt="drawing" width="150"/> | | $\frac{1}{g_m + \frac{1}{r_{\pi} \|\| r_o}}$ | |
+| Diode Connected - Emitter Grounded - Look into Collector | <img src="./image/Figure22.png" alt="drawing" width="150"/> | | $\frac{1}{g_m + \frac{1}{r_{\pi} \|\| r_o}}$ | |
 
 
-## Emitter Follower
-
-Amplifier Gain < 1
-
+Note:
+* Common-Collector is calculated with $V_A = \infty$
+* PNP transistor has the same small signal model but the collector and emitter are inverted in the symbol.
+* To obtain the characteristics for MOS transistors, set $\beta \to \infty$.
