@@ -34,7 +34,7 @@ As a result, its equivalent resistance is zero, which is a wire.
 
 | Topology | Schematic | Gain | Input Impedance | Output Impedance |
 |---: |---: |---: |---: |---: |
-| Common-Emitter | ![](./image/Figure19.png) | $\frac{-R_C}{R_E + \frac{1}{g_m}}$ | $r_{\pi} + R_E (1 + \beta)$ | $R_C$ |
+| Common-Emitter | ![Figure19](./image/Figure19.png) | $\frac{-R_C}{R_E + \frac{1}{g_m}}$ | $r_{\pi} + R_E (1 + \beta)$ | $R_C$ |
 | Common-Base | ![Figure20](./image/Figure20.png) | $\frac{R_C}{R_E (1 + \frac{1}{\beta}) + \frac{1}{g_m}}$ | $\frac{1}{g_m + \frac{1}{r_{\pi}}} + R_E$ | $R_C$ |
 | Common-Collector | <img src="./image/Figure21.png" alt="drawing" width="150"/> | $\frac{R_E}{R_E + \frac{1}{g_m (1 + \frac{1}{\beta})}}$ | $r_{\pi} + R_E (1 + \beta)$ | $\frac{1}{g_m + \frac{1}{R_E} + \frac{1}{r_{\pi}}}$ |
 | Diode Connected - Base Collector Grounded - Look into Emitter | <img src="./image/Figure22.png" alt="drawing" width="150"/> | | $\frac{1}{g_m + \frac{1}{r_{\pi} \|\| r_o}}$ | |
