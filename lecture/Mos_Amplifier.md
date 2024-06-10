@@ -1,2 +1,0 @@
-## CMOS Common Gate Amplifier
-

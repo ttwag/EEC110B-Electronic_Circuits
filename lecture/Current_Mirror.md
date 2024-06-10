@@ -1,8 +1,10 @@
 # Current Mirror
 
+## 1. Introduction
+
 In BJT and MOS amplifiers, the biasing currents are often dependent on the supply voltage and the temperature.
 
-However, in certain applications such as the mobile phone, the supply voltage could vary. We also want the phone to be operating in different temperatures across the world.
+However, in certain applications such as the mobile phone, the supply voltage could fluctuate.
 
 The **Bandgap Reference Circuit** is a circuit that removes dependence on the supply voltage and the temperature.
 
@@ -10,6 +12,8 @@ However, the bandgap reference circuit is hard to produce and the mobile phone n
 
 As a result, we need a method to copy the bandgap reference circuit, which is the purpose of the **Current Mirrors**.
 
+
+## 2. BJT Current Mirror
 
 **Solution 1:** Bandgap Reference Current creates supply and temperature independent of voltages and currents. However, it's complex so cannot be used everywhere in a large integrated circuit.
 
@@ -64,7 +68,7 @@ We can modify this circuit to make that actual equation closer to the ideal mirr
 
 $$I_{copy} = \frac{n I_{REF}}{1 + \frac{1}{\beta^2}(n + 1)}$$
 
-## MOS Current Mirror
+## 3. MOS Current Mirror
 
 ![Figure18](./image/Figure18.png)
 

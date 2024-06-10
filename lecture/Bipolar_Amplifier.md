@@ -5,7 +5,7 @@ A voltage-controlled current source can form an amplifier, and here are some met
 * **Speed** - Operating frequency
 * **Noise** - Amplifier introduces noise
 
-## I/O Resistance
+## 1. I/O Resistance
 
 An ideal voltage amplifier has an input that acts as a voltmeter, which senses the voltage without disturbing (loading) the preceding stage.
 
@@ -30,7 +30,7 @@ For an ideal independent voltage source, the voltage is constant regardless of a
 
 As a result, its equivalent resistance is zero, which is a wire.
 
-## NPN BJT Small Signal Characteristics
+## 2. NPN BJT Small Signal Characteristics
 
 | Topology | Schematic | Gain | Input Impedance | Output Impedance |
 |---: |---: |---: |---: |---: |

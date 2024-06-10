@@ -1,13 +1,8 @@
 # MOS Transistor
 
+The MOS transistor is another type of transistor that works without a PN junction. Instead, voltage is applied to the gate to form a hole or electron channel.
 
-## Summary
-
-We want a voltage-controlled current source. 
-
-In the NMOS case, we want the drain current to depend on the gate-source voltage but not depend on the drain-source voltage.
-
-### NMOS
+## 1. NMOS
 
 Saturation: 
  * $V_{GS} > V_{TH}$
@@ -25,7 +20,7 @@ $$= \sqrt{2 \mu_n C_{ox} \frac{W}{L} I_D}$$
 
 $$= \frac{2 I_D}{V_{GS} - V_{TH}}$$
 
-### PMOS
+## 2. PMOS
 
 **Regions of Operation**
 
@@ -48,7 +43,7 @@ Small Signal Model - Same for NMOS and PMOS
 
 
 
-## NMOS Region of Operations - Saturation
+## 3. NMOS Region of Operations - Saturation
 
 ![Figure8](./image/Figure8.png)
 
@@ -65,7 +60,7 @@ $$I_D = \frac{1}{2}\mu_n C_{ox} \frac{W}{L}(V_{GS} - V_{TH})^2 (1 + \lambda V_{D
 
 where $\mu_n$ is the mobility of electron, $W$ and $L$ are the width and length of the device, $\lambda$ is the channel length modulation coefficient.
 
-## Small Signal
+### Small Signal
 
 ![Figure9](./image/Figure9.png)
 
@@ -79,7 +74,7 @@ $$= \sqrt{2 \mu_n C_{ox} \frac{W}{L} I_D}$$
 
 $$= \frac{2 I_D}{V_{GS} - V_{TH}}$$
 
-## Transconductance
+#### Transconductance
 
 $g_m$ or transconductance is a measure of how much drain current changes for a given change in $V_{GS}$
 
@@ -99,7 +94,7 @@ $$g_m = \frac{2I_D}{V_{GS} - V_{TH}}$$
 
 Increasing the width of MOSFET is equivalent to putting them in parallel, and this increases the $g_m$
 
-## NMOS Region of Operations - Triode
+## 4.  NMOS Region of Operations - Triode
 
 ![Figure10](./image/Figure10.png)
 
@@ -109,7 +104,7 @@ $$V_{DS} < V_{GS} - V_{TH} \space or \space V_{GD} > V_{TH}$$
 
 $$I_D = \frac{1}{2} \mu_n C_{ox} \frac{W}{L} [2(V_{GS} - V_{TH})V_{DS} + V_{DS}^2]$$
 
-## NMOS Region of Operations - Deep Triode
+## 5. NMOS Region of Operations - Deep Triode
 
 The MOS transistor behaves as a variable resistor
 

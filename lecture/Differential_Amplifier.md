@@ -1,6 +1,6 @@
 # Differential Amplifier
 
-## Summary
+## 1. Summary
 * Differential amplifier is immune to variation in the supply voltage.
 * With the same input voltage, the collector current is the same. However, the collector current will be greater on the BJT with greater input voltage.
 * The small signal input needs to be 180 degrees out of phase.
@@ -21,7 +21,7 @@ $$v_X - v_Y = A_v v_{in}$$
 
 The ripple from the power supply is taken away when finding the difference between the two outputs.
 
-## Large Signal
+## 2. Large Signal
 ### Qualitative Analysis
 Consider the following differential amplifier
 
@@ -52,7 +52,7 @@ $$I_{C1} = \frac{I_{EE} e^{\frac{V_{in1} - V_{in2}}{V_T}}}{1 + e^{\frac{V_{in1} 
 $$I_{C2} = \frac{I_{EE}}{1 + e^{\frac{V_{in1} - V_{in2}}{V_T}}}$$
 
 
-## Small Signal
+## 3. Small Signal
 
 If $V_{in1} = -V_{in2}$, the common node of the differential pair is a **constant ground**.
 

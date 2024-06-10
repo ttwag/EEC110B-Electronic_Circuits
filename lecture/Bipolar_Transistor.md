@@ -1,12 +1,12 @@
 # Bipolar Transistor Operations
 
-## Introduction
+## 1. Introduction
 
 ![Figure1](./image/Figure1.png)
 
 The Bipolar Transistor (BJT) is made of three doped silicon regions. The outer two regions are doped with the same polarity while the middle region is doped with opposite polarity. Therefore, there is a PNP and NPN bipolar transistor. In this document, we will abstract away the physical behaviors of the BJT and model it with a small and large signal model when it's in the region of operation.
 
-## Summary
+## 2. Bipolar Transistor
 
 ### NPN Bipolar Transistor
 
@@ -55,9 +55,9 @@ $$r_{\pi} = \frac{\beta}{g_m}$$
 $$r_o = \frac{V_A}{I_C}$$
 
 
-## NPN Regions of Operation - Forward Active Region
+## 3. NPN Regions of Operation - Forward Active Region
 
-**NPN BJT Requirement**
+### NPN BJT Requirement
 * Base-emitter junction is forward-biased ($V_{BE} > 0$)
 * Base-collector junction is reverse-biased ($V_{BC} < 0$)
 
@@ -74,7 +74,7 @@ In summary,
 $$V_{BE} < V_{CE}$$
 $$V_{BE} > 0$$
 
-**Collector Current**
+### Collector Current
 
 $$I_C \approx I_s e^{\frac{V_{BE}}{V_T}}$$
 
@@ -88,7 +88,7 @@ Ideally, the collector current is **not** a function of $V_{CE}$. We want it to 
 
 ![Figure2](./image/Figure2.png)
 
-**Large Signal Model**
+### Large Signal Model
 
 Since $V_{BE} > 0$, the base-emitter junction is forward-biased and resembles a diode. Also, the collector current is modeled by the $I_C$ equation, which depends on $V_{BE}$.
 
@@ -110,7 +110,7 @@ The base-emitter junction is modelled as a diode because the collector current e
 
 $$I_B = \frac{I_C}{\beta} = \frac{I_S}{\beta}e^{\frac{V_{BE}}{V_T}}$$
 
-**Small-Signal Model**
+### Small-Signal Model
 
 We want to work with the BJT without working with the $I_C = I_se^{\frac{V_{BE}}{V_T}}$ nonlinear equation.
 
@@ -143,9 +143,6 @@ The resistance between the base and emitter in the small signal analysis is
 $$r_{\pi} = \frac{\Delta V_{BE}}{I_{B, AC}} = \frac{\beta}{g_m}$$
 
 
-
-
-
 The small signal model describes the behavior of the transistor when a small perturbation of voltages (EX: Sinusoidal perturbation) is applied to the transistor nodes.
 
 
@@ -162,7 +159,7 @@ $r_o$ is the early effect resistance between the collector and emitter.
 
 $$r_o = \frac{d V_{CE}}{d I_C} = \frac{V_A}{I_C}$$
 
-**Early Effect**
+#### Early Effect
 
 ![Figure4](./image/Figure4.png)
 
@@ -176,15 +173,15 @@ $$I_C = \Big(I_s e^{\frac{V_{BE}}{V_T}}\Big)\Big( 1 + \frac{V_{CE}}{V_A}\Big)$$
 
 As $V_A \longrightarrow \infty$, there's no early effect.
 
-**Input/Output Impedance**
+#### Input/Output Impedance
 
-## NPN Regions of Operation - Soft Saturation
+## 4. NPN Regions of Operation - Soft Saturation
 * Base-emitter junction is forward biased ($V_{BE} > 0$)
 * Base-collector junction is weakly forward-biased ($-200\space mV \leq V_C - V_B \leq 0$)
 
-## NPN Regions of Operation - Deep Saturation
+## 5. NPN Regions of Operation - Deep Saturation
 * Base-emitter junction is forward biased ($V_{BE} > 0$).
-* Base-collector junciton is heavily forward-biased ($V_C - V_B \leq -200 \space mV $).
+* Base-collector junction is heavily forward-biased ($V_C - V_B \leq -200 \space mV $).
 
 The transistor loses its voltage-controlled current capability and $V_{CE}$ becomes constant.
 
