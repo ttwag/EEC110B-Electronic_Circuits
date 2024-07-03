@@ -1,4 +1,4 @@
-# Lab 1 - Transistor's Characteristics
+# Lab 1 - Characteristics of BJT and MOS Transistors
 
 The goal of this lab is to understand the behavior of BJT and MOS transistors after applying voltage to their different terminals.
 We simulated the behavior of the circuit first, then built the circuit on a breadboard.

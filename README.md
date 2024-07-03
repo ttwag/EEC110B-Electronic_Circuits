@@ -18,7 +18,7 @@ This is an introductory electronic circuit course that covers the application of
 * [Differential Amplifier](./lecture/Differential_Amplifier.md)
 
 ### Lab
-* [Verify the Characteristics of BJT and MOS Transistors](./lab/lab_transistor_char.md)
+* [Characteristics of BJT and MOS Transistors](./lab/lab_transistor_char.md)
 
 ## Course Evaluation
 * It's interesting that although transistors are nonlinear devices, we still try to linearize them and then compute the voltage and currents with elementary circuit analysis methods.
