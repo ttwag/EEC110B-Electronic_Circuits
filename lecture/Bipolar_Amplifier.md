@@ -1,4 +1,4 @@
-# Bipolar Amplifier
+# Different Topologies of Bipolar Amplifiers
 
 A voltage-controlled current source can form an amplifier, and here are some metrics that evaluate the performance of the amplifier:
 * **Power Dissipation** - Determines the battery lifetime

@@ -1,12 +1,10 @@
-# Bipolar Transistor Operations
-
-## 1. Introduction
+# Introduction to Bipolar Transistor
 
 ![Figure1](./image/Figure1.png)
 
 The Bipolar Transistor (BJT) is made of three doped silicon regions. The outer two regions are doped with the same polarity while the middle region is doped with opposite polarity. Therefore, there is a PNP and NPN bipolar transistor. In this document, we will abstract away the physical behaviors of the BJT and model it with a small and large signal model when it's in the region of operation.
 
-## 2. Bipolar Transistor
+## 1. Bipolar Transistor Summary
 
 ### NPN Bipolar Transistor
 
@@ -55,7 +53,7 @@ $$r_{\pi} = \frac{\beta}{g_m}$$
 $$r_o = \frac{V_A}{I_C}$$
 
 
-## 3. NPN Regions of Operation - Forward Active Region
+## 2. NPN Regions of Operation - Forward Active Region
 
 ### NPN BJT Requirement
 * Base-emitter junction is forward-biased ($V_{BE} > 0$)
@@ -175,11 +173,11 @@ As $V_A \longrightarrow \infty$, there's no early effect.
 
 #### Input/Output Impedance
 
-## 4. NPN Regions of Operation - Soft Saturation
+## 3. NPN Regions of Operation - Soft Saturation
 * Base-emitter junction is forward biased ($V_{BE} > 0$)
 * Base-collector junction is weakly forward-biased ($-200\space mV \leq V_C - V_B \leq 0$)
 
-## 5. NPN Regions of Operation - Deep Saturation
+## 4. NPN Regions of Operation - Deep Saturation
 * Base-emitter junction is forward biased ($V_{BE} > 0$).
 * Base-collector junction is heavily forward-biased ($V_C - V_B \leq -200 \space mV $).
 

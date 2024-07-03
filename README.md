@@ -28,4 +28,4 @@ This is an introductory electronic circuit course that covers the application of
 
 ## Reference
 * This is the note that I took while taking **Professor Omeed Momeni**'s EEC110B course in the Spring of 2024. A detailed course description can be found here: [https://ece.ucdavis.edu/course-catalog](https://ece.ucdavis.edu/course-catalog)
-* In this course, we use the following textbook: **Fundamentals of Microelectronics by Behzad Razavi, 3rd Edition**.
+* In this course, we used the following textbook: **Fundamentals of Microelectronics by Behzad Razavi, 3rd Edition**.

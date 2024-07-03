@@ -1,4 +1,4 @@
-# MOS Transistor
+# Introduction to MOS Transistor
 
 The MOS transistor is another type of transistor that works without a PN junction. Instead, voltage is applied to the gate to form a hole or electron channel.
 
