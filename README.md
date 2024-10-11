@@ -1,6 +1,6 @@
 # EEC110B-Electronic Circuits
  
-This is an introductory electronic circuit course that covers the application of **Bipolar** and Meta-Oxide Silicon (**MOS**) transistors in single and multi-stage amplifiers. Different amplifier topologies such as Common-Base, Common-Emitter, and Common-Source BJT are covered. We also discussed other crucial amplifiers such as **Current Mirror** and **Differential Amplifier**.
+This is an introductory electronic circuit course that covers the application of **Bipolar** and Metal-Oxide Silicon (**MOS**) transistors in single and multi-stage amplifiers. Different amplifier topologies such as Common-Base, Common-Emitter, and Common-Source BJT are covered. We also discussed other crucial amplifiers such as **Current Mirror** and **Differential Amplifier**.
 
 ![Figure29](./lecture/image/Figure29.jpg)
 
